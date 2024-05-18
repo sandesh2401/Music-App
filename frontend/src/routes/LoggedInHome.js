@@ -67,7 +67,7 @@ const Home = () => {
         <LoggedInContainer curActiveScreen="home">
             <PlaylistView titleText="Focus" cardsData={focusCardsData} />
             <PlaylistView
-                titleText="Spotify Playlists"
+                titleText="Playlists"
                 cardsData={spotifyPlaylistsCardData}
             />
             <PlaylistView

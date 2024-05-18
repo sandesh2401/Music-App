@@ -86,9 +86,9 @@ const UploadSong = () => {
                 <div className="navbar w-full h-1/10 bg-black bg-opacity-30 flex items-center justify-end">
                     <div className="w-1/2 flex h-full">
                         <div className="w-2/3 flex justify-around items-center">
-                            <TextWithHover displayText={"Premium"} />
+                            <TextWithHover displayText={"Download"} />
                             <TextWithHover displayText={"Support"} />
-                            <TextWithHover displayText={"Logout"} />
+                            <TextWithHover displayText={"About Us"} />
                             <div className="h-1/2 border-r border-white"></div>
                         </div>
                         <div className="w-1/3 flex justify-around h-full items-center">
