@@ -44,7 +44,7 @@ opts.secretOrKey = "thisKeyIsSupposedToBeSecret";
 passport.use(
     new JwtStrategy(opts, function (jwt_payload, done) {
         User.findOne({_id: jwt_payload.identifier}, function (err, user) {
-            // done(error, doesTheUserExist)
+          
             if (err) {
                 return done(err, false);
             }
@@ -58,16 +58,16 @@ passport.use(
     })
 );
 
-// API : GET type : / : return text "Hello world"
-app.get("/", (req, res) => {
+
+// app.get("/", (req, res) => {
     
-    res.send("Hello World");
-});
+//     res.send("Hello World");
+// });
 app.use("/auth", authRoutes);
 app.use("/song", songRoutes);
 app.use("/playlist", playlistRoutes);
 
-// Now we want to tell express that our server will run on localhost:8000
+
 app.listen(port, () => {
     console.log("App is running on port " + port);
 });

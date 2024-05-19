@@ -12,6 +12,7 @@ import Library from "./routes/Library";
 import SinglePlaylistView from "./routes/SinglePlaylistView";
 import {useCookies} from "react-cookie";
 import songContext from "./contexts/songContext";
+import AboutUsPage from "./routes/AboutUs";
 
 function App() {
     const [currentSong, setCurrentSong] = useState(null);
@@ -44,6 +45,7 @@ function App() {
                                 path="/uploadSong"
                                 element={<UploadSong />}
                             />
+                            <Route path="/AboutUsPage" element={<AboutUsPage />} />
                             <Route path="/myMusic" element={<MyMusic />} />
                             <Route path="/search" element={<SearchPage />} />
                             <Route path="/library" element={<Library />} />

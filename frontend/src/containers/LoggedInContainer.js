@@ -8,6 +8,8 @@ import songContext from "../contexts/songContext";
 import CreatePlaylistModal from "../modals/CreatePlaylistModal";
 import AddToPlaylistModal from "../modals/AddToPlaylistModal";
 import {makeAuthenticatedPOSTRequest} from "../utils/serverHelpers";
+import { useNavigate } from 'react-router-dom';
+
 
 const LoggedInContainer = ({children, curActiveScreen}) => {
     const [createPlaylistModalOpen, setCreatePlaylistModalOpen] =
@@ -24,6 +26,7 @@ const LoggedInContainer = ({children, curActiveScreen}) => {
     } = useContext(songContext);
 
     const firstUpdate = useRef(true);
+    const navigate = useNavigate();
 
     useLayoutEffect(() => {
         // the following if statement will prevent the useEffect from running on the first render.
@@ -84,6 +87,9 @@ const LoggedInContainer = ({children, curActiveScreen}) => {
             pauseSound();
             setIsPaused(true);
         }
+    };
+    const handleAboutUsClick = () => {
+        navigate('/AboutUsPage'); // Navigate to the About Us page
     };
 
     return (
@@ -171,9 +177,9 @@ const LoggedInContainer = ({children, curActiveScreen}) => {
                     <div className="navbar w-full h-1/10 bg-black bg-opacity-30 flex items-center justify-end">
                         <div className="w-1/2 flex h-full">
                             <div className="w-2/3 flex justify-around items-center">
-                                <TextWithHover displayText={"Download"} />
+                                <TextWithHover displayText={"Download" }  />
                                 <TextWithHover displayText={"Support"} />
-                                <TextWithHover displayText={"About Us"} />
+                                <TextWithHover displayText={"About Us"} onClick={handleAboutUsClick} />
                                 <div className="h-1/2 border-r border-white"></div>
                             </div>
                             <div className="w-1/3 flex justify-around h-full items-center">
