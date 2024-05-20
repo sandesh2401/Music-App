@@ -89,7 +89,10 @@ const LoggedInContainer = ({children, curActiveScreen}) => {
         }
     };
     const handleAboutUsClick = () => {
-        navigate('/AboutUsPage'); // Navigate to the About Us page
+        navigate('/AboutUs'); // Navigate to the About Us page
+    };
+    const handleUploadSongClick = () => {
+        navigate('/uploadSong'); // Navigate to the About Us page
     };
 
     return (
@@ -179,11 +182,11 @@ const LoggedInContainer = ({children, curActiveScreen}) => {
                             <div className="w-2/3 flex justify-around items-center">
                                 <TextWithHover displayText={"Download" }  />
                                 <TextWithHover displayText={"Support"} />
-                                <TextWithHover displayText={"About Us"} onClick={handleAboutUsClick} />
+                                <TextWithHover displayText={"Contact Us"} onClick={handleAboutUsClick} />
                                 <div className="h-1/2 border-r border-white"></div>
                             </div>
                             <div className="w-1/3 flex justify-around h-full items-center">
-                                <TextWithHover displayText={"Upload Song"} />
+                                <TextWithHover displayText={"Upload Song"} onClick={handleUploadSongClick}  />
                                 <div className="bg-white w-10 h-10 flex items-center justify-center rounded-full font-semibold cursor-pointer">
                                     AC
                                 </div>

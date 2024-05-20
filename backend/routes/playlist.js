@@ -65,24 +65,8 @@ router.get(
     }
 );
 
-// Get all playlists made by an artist
-// /get/artist/xyz
-router.get(
-    "/get/artist/:artistId",
-    passport.authenticate("jwt", {session: false}),
-    async (req, res) => {
-        const artistId = req.params.artistId;
 
-        // We can do this: Check if artist with given artist Id exists
-        const artist = await User.findOne({_id: artistId});
-        if (!artist) {
-            return res.status(304).json({err: "Invalid Artist ID"});
-        }
 
-        const playlists = await Playlist.find({owner: artistId});
-        return res.status(200).json({data: playlists});
-    }
-);
 
 // Add a song to a playlist
 router.post(

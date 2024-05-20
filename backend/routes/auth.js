@@ -4,7 +4,7 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const {getToken} = require("../utils/helpers");
 
-// This POST route will help to register a user
+// register a user
 router.post("/register", async (req, res) => {
     // This code is run when the /register api is called as a POST request
 

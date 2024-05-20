@@ -88,7 +88,7 @@ const UploadSong = () => {
                         <div className="w-2/3 flex justify-around items-center">
                             <TextWithHover displayText={"Download"} />
                             <TextWithHover displayText={"Support"} />
-                            <TextWithHover displayText={"About Us"} />
+                            <TextWithHover displayText={"Contact Us"} />
                             <div className="h-1/2 border-r border-white"></div>
                         </div>
                         <div className="w-1/3 flex justify-around h-full items-center">

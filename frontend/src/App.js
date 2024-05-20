@@ -5,14 +5,14 @@ import LoginComponent from "./routes/Login";
 import SignupComponent from "./routes/Signup";
 import HomeComponent from "./routes/Home";
 import LoggedInHomeComponent from "./routes/LoggedInHome";
-import UploadSong from "./routes/UploadSong";
 import MyMusic from "./routes/MyMusic";
 import SearchPage from "./routes/SearchPage";
 import Library from "./routes/Library";
 import SinglePlaylistView from "./routes/SinglePlaylistView";
 import {useCookies} from "react-cookie";
 import songContext from "./contexts/songContext";
-import AboutUsPage from "./routes/AboutUs";
+import AboutUs from "./routes/AboutUs";
+import UploadSong from "./routes/UploadSong"
 
 function App() {
     const [currentSong, setCurrentSong] = useState(null);
@@ -45,7 +45,7 @@ function App() {
                                 path="/uploadSong"
                                 element={<UploadSong />}
                             />
-                            <Route path="/AboutUsPage" element={<AboutUsPage />} />
+                            <Route path="/AboutUs" element={<AboutUs/>} />
                             <Route path="/myMusic" element={<MyMusic />} />
                             <Route path="/search" element={<SearchPage />} />
                             <Route path="/library" element={<Library />} />
