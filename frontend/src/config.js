@@ -1,1 +1,1 @@
-export const cloudinary_upload_preset = "vxjruff9"
+export const cloudinary_upload_preset = ""
